@@ -9,6 +9,10 @@ public class First
 		this.x=x;
 		this.y=y;
 	}
+	public First(String s)
+	{
+		System.out.println("s="+s);
+	}
 	public void add()
 	{
 		System.out.println("sum="+(x+y));

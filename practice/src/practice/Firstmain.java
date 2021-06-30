@@ -7,7 +7,7 @@ public class Firstmain {
 		c.add();
 		c.sub();
 		c.multiply();
-
+		First c1=new First("hello");
 	}
 
 }
