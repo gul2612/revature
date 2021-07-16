@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing:border-box;
+    }
+    body{
+        
+        padding-left: 20px;
+        padding-right: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .container{
+        background-color: lightgray;
+        padding: 20px 20px 20px 20px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"],
+    input[type="date"],
+    select,
+    textarea
+    {
+        background-color:whitesmoke;
+        border-radius: 5px;
+        width:100%;
+        border: none;
+        padding: 12px 20px;
+        margin: 8px 0;
+        
+        
+    }
+    fieldset{
+        background-color: whitesmoke;
+        border-radius: 5px;
+        border: none;
+       
+    }
+    input[type="submit"]
+    {
+        background-color: blue;
+        border: none;
+        width: 100%;
+        border-radius: 5px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        font-size: 100%;
+    }
+    input[type="submit"]:hover
+    {
+        cursor: pointer;
+        background-color: green;
+        color: white;
+        font-size: 20px;
+    }
+    #cancel{
+        background-color: rgba(230, 73, 73, 0.911);
+    }
+    #cancel:hover
+    {
+        color: white;
+        font-size: 20px;
+        background-color: rgb(255, 4, 4);
+    }
+    .heading{
+        text-align: center;
+    }
+</style>
+<body>
+    
+        <div class="container">
+            <form action="" method="get">
+                <h1 class="heading">Payment Form</h1>
+                <hr>
+                <h2>User Information</h2>
+                <p>Name: *
+                    <input type="text" name="name" id="name" placeholder="Enter name" >
+                </p>
+                <p>
+                    <fieldset>
+                        <legend>Gender</legend>
+                        Male<input type="radio" name="gender" id="male" >
+                        Female<input type="radio" name="gender" id="female">
+                    </fieldset>
+                </p>
+                <p>Address:
+                    <textarea name="address" id="address" cols="40" rows="10" placeholder="Enter address"></textarea>
+                </p>
+                <p>Email:
+                    <input type="email" name="email" id="email" placeholder="abc@gmail.com">
+                </p>
+                <p>Pincode:
+                    <input type="number" name="pin"id="pin">
+                </p>
+                <h2>Payment Information</h2>
+                <p>card Type: *
+                    <select name="card_type" id="card_type" required>
+                        <option value="select card type">--select card type--</option>
+                        <option value="Visa">Visa</option>
+                        <option value="Rupay">Rupay</option>
+                        <option value="Mastercard">Mastercard</option>
+                        <option value="Paytm">Paytm</option>
+                    </select>
+                </p>
+                <p>Card Number: *
+                    <input type="text" name="card_number" id="card_number"placeholder="1111-2222-3333-4444" required>
+                </p>
+                <p>Expiration Date:*
+                    <input type="date" name="exp_date" id="exp_date" required>
+                </p>
+                <p>CVV: *
+                    <input type="password" name="cvv" id="cvv"required>
+                </p>
+                <p>
+                    <input type="submit"name="submit"id="submit" value="Pay Now">
+                    <input type="submit"name="cancel"id="cancel" value="Cancel">
+                </p>
+            </form>
+        </div>
+    
+</body>
+</html>
